@@ -1,0 +1,20 @@
+{
+	"name": "inlm/model",
+	"type": "library",
+	"description": "Base model for LeanMapper",
+	"license": "BSD-3-Clause",
+	"authors": [
+		{
+			"name": "Jan Pecha",
+			"homepage": "http://www.janpecha.cz/"
+		}
+	],
+	"require": {
+		"php": ">=5.4.0",
+		"tharos/leanmapper": "^2.2",
+		"inlm/query-object": "^1.1"
+	},
+	"autoload": {
+		"classmap": ["src/"]
+	}
+}
