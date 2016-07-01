@@ -24,9 +24,19 @@
 		 */
 		public function get($id)
 		{
+			return $this->getByColumn($this->mapper->getPrimaryKey($this->getTable()), $id);
+		}
+
+
+		/**
+		 * Fetchs entity by primary key
+		 * @return Entity|FALSE
+		 */
+		protected function getByColumn($column, $value)
+		{
 			$row = $this->connection->select('*')
 				->from($this->getTable())
-				->where('%n = ?', $this->mapper->getPrimaryKey($this->getTable()), $id)
+				->where('%n = ?', $column, $value)
 				->fetch();
 
 			if ($row === FALSE) {
