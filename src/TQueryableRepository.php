@@ -35,7 +35,7 @@
 		 */
 		public function findOne(IQuery $query)
 		{
-			$row = $this->apply($query)
+			$row = $this->applyQuery($query)
 				->removeClause('limit')
 				->removeClause('offset')
 				->fetch();
