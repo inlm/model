@@ -29,7 +29,7 @@
 
 
 		/**
-		 * Fetchs entity by primary key
+		 * Fetchs entity by column value
 		 * @return Entity|FALSE
 		 */
 		protected function getByColumn($column, $value)
