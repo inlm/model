@@ -11,7 +11,7 @@
 	],
 	"require": {
 		"php": ">=5.4.0",
-		"tharos/leanmapper": "^2.2",
+		"tharos/leanmapper": "^2.2 || ^3.0",
 		"inlm/query-object": "^1.1 || ^2.0"
 	},
 	"autoload": {
