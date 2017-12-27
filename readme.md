@@ -17,4 +17,4 @@ Library requires PHP 5.4.0 or later.
 ------------------------------
 
 License: [New BSD License](license.md)
-<br>Author: Jan Pecha, http://www.janpecha.cz/
+<br>Author: Jan Pecha, https://www.janpecha.cz/
