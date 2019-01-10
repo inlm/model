@@ -31,7 +31,7 @@
 
 		/**
 		 * Fetchs one entity by Query object
-		 * @return Entity|FALSE
+		 * @return Entity|NULL
 		 */
 		public function findOne(Query $query)
 		{
@@ -39,7 +39,7 @@
 				->removeClause('limit')
 				->removeClause('offset')
 				->fetch();
-			return $row ? $this->createEntity($row) : FALSE;
+			return $row ? $this->createEntity($row) : NULL;
 		}
 
 

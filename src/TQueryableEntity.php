@@ -33,7 +33,7 @@
 
 		/**
 		 * Fetchs one entity by Query object
-		 * @return Entity|FALSE
+		 * @return Entity|NULL
 		 */
 		public function findOne($field, Query $query)
 		{
@@ -42,7 +42,7 @@
 			if ($entities) {
 				return $entities[0];
 			}
-			return FALSE;
+			return NULL;
 		}
 
 

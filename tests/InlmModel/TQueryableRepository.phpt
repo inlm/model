@@ -67,7 +67,7 @@ test(function () use ($bookRepository, $sql) {
 		->where('@id > 9999')
 		->findOne();
 
-	Assert::false($book);
+	Assert::null($book);
 });
 
 

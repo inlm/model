@@ -20,7 +20,7 @@
 
 		/**
 		 * Fetchs entity by primary key
-		 * @return Entity|FALSE
+		 * @return Entity|NULL
 		 */
 		public function get($id)
 		{
@@ -30,7 +30,7 @@
 
 		/**
 		 * Fetchs entity by column value
-		 * @return Entity|FALSE
+		 * @return Entity|NULL
 		 */
 		protected function getByColumn($column, $value)
 		{
@@ -39,9 +39,6 @@
 				->where('%n = ?', $column, $value)
 				->fetch();
 
-			if ($row === FALSE) {
-				return $row;
-			}
-			return $this->createEntity($row);
+			return $row ? $this->createEntity($row) : NULL;
 		}
 	}

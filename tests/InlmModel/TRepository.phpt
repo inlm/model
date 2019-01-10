@@ -49,5 +49,5 @@ test(function () use ($bookRepository) {
 
 test(function () use ($bookRepository) {
 	$book = $bookRepository->get(9999);
-	Assert::false($book);
+	Assert::null($book);
 });
