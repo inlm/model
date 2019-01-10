@@ -4,7 +4,7 @@
 
 	use LeanMapper\Entity;
 	use LeanMapper\Fluent;
-	use LeanMapperQuery\IQuery;
+	use LeanMapperQuery\Query;
 
 
 	trait TQueryableRepository
@@ -23,7 +23,7 @@
 		 * Fetchs entities by Query object
 		 * @return Entity[]
 		 */
-		public function find(IQuery $query)
+		public function find(Query $query)
 		{
 			return $this->createEntities($this->applyQuery($query)->fetchAll());
 		}
@@ -33,7 +33,7 @@
 		 * Fetchs one entity by Query object
 		 * @return Entity|FALSE
 		 */
-		public function findOne(IQuery $query)
+		public function findOne(Query $query)
 		{
 			$row = $this->applyQuery($query)
 				->removeClause('limit')
@@ -47,7 +47,7 @@
 		 * Fetchs count by Query object
 		 * @return int
 		 */
-		public function findCount(IQuery $query)
+		public function findCount(Query $query)
 		{
 			return count($this->applyQuery($query));
 		}
@@ -56,7 +56,7 @@
 		/**
 		 * @return Fluent
 		 */
-		protected function applyQuery(IQuery $query)
+		protected function applyQuery(Query $query)
 		{
 			$fluent = $this->createFluent();
 			$query->applyQuery($fluent, $this->mapper);

@@ -5,7 +5,7 @@
 	use LeanMapper\Entity;
 	use LeanMapper\Fluent;
 	use LeanMapperQuery;
-	use LeanMapperQuery\IQuery;
+	use LeanMapperQuery\Query;
 
 
 	trait TQueryableEntity
@@ -24,7 +24,7 @@
 		 * Fetchs entities by Query object
 		 * @return Entity[]
 		 */
-		public function find($field, IQuery $query)
+		public function find($field, Query $query)
 		{
 			$entities = LeanMapperQuery\Entity::queryEntityProperty($this, $field, $query);
 			return $this->entityFactory->createCollection($entities);
@@ -35,7 +35,7 @@
 		 * Fetchs one entity by Query object
 		 * @return Entity|FALSE
 		 */
-		public function findOne($field, IQuery $query)
+		public function findOne($field, Query $query)
 		{
 			$query->limit(1);
 			$entities = LeanMapperQuery\Entity::queryEntityProperty($this, $field, $query);
@@ -50,7 +50,7 @@
 		 * Fetchs count by Query object
 		 * @return int
 		 */
-		public function findCount($field, IQuery $query)
+		public function findCount($field, Query $query)
 		{
 			return count(LeanMapperQuery\Entity::queryEntityProperty($this, $field, $query));
 		}

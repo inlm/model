@@ -3,7 +3,7 @@
 	namespace Inlm\Model;
 
 	use LeanMapper\Entity;
-	use LeanMapperQuery\IQuery;
+	use LeanMapperQuery\Query;
 
 
 	interface IQueryable
@@ -11,17 +11,17 @@
 		/**
 		 * @return Entity[]
 		 */
-		public function find(IQuery $query);
+		public function find(Query $query);
 
 
 		/**
 		 * @return Entity
 		 */
-		public function findOne(IQuery $query);
+		public function findOne(Query $query);
 
 
 		/**
 		 * @return int
 		 */
-		public function findCount(IQuery $query);
+		public function findCount(Query $query);
 	}
