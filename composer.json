@@ -12,7 +12,7 @@
 	"require": {
 		"php": ">=5.4.0",
 		"tharos/leanmapper": "^3.0",
-		"inlm/query-object": "^1.1 || ^2.0"
+		"mbohuslavek/leanmapper-query": "@dev"
 	},
 	"autoload": {
 		"classmap": ["src/"]

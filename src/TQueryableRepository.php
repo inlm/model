@@ -4,7 +4,7 @@
 
 	use LeanMapper\Entity;
 	use LeanMapper\Fluent;
-	use Inlm\QueryObject\IQuery;
+	use LeanMapperQuery\IQuery;
 
 
 	trait TQueryableRepository

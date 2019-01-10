@@ -3,7 +3,7 @@
 	namespace Inlm\Model;
 
 	use LeanMapper\Entity;
-	use Inlm\QueryObject\IQuery;
+	use LeanMapperQuery\IQuery;
 
 
 	interface IQueryable

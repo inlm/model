@@ -2,7 +2,7 @@
 
 	namespace Inlm\Model;
 
-	use Inlm\QueryObject\Query;
+	use LeanMapperQuery\Query;
 	use LeanMapper\Entity;
 
 
