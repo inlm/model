@@ -1,7 +1,7 @@
 
 # Inlm Model
 
-[![Build Status](https://travis-ci.org/inlm/model.svg?branch=master)](https://travis-ci.org/inlm/model)
+[![Tests Status](https://github.com/inlm/model/workflows/Tests/badge.svg)](https://github.com/inlm/model/actions)
 
 Base model for [Lean Mapper](http://www.leanmapper.com/).
 
