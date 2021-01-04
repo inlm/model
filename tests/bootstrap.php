@@ -16,7 +16,7 @@ function createConnection()
 
 function createMapper()
 {
-	return new TestMapper;
+	return new LeanMapper\DefaultMapper(NULL);
 }
 
 
@@ -41,12 +41,6 @@ function extractIds(array $entities)
 function test($cb)
 {
 	$cb();
-}
-
-
-class TestMapper extends LeanMapper\DefaultMapper
-{
-	protected $defaultEntityNamespace = NULL;
 }
 
 

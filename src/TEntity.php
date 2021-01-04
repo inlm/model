@@ -12,7 +12,7 @@
 		use TEntityRowValue;
 
 
-		public function __set($name, $value)
+		public function __set(string $name, $value): void
 		{
 			$property = $this->getCurrentReflection()->getEntityProperty($name);
 
@@ -25,7 +25,7 @@
 		}
 
 
-		public function __get($name)
+		public function __get(string $name)
 		{
 			$property = $this->getCurrentReflection()->getEntityProperty($name);
 

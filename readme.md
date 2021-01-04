@@ -17,7 +17,7 @@ Base model for [Lean Mapper](http://www.leanmapper.com/).
 composer require inlm/model
 ```
 
-Library requires PHP 5.6.0 or later.
+Library requires PHP 7.2.0 or later.
 
 ------------------------------
 
