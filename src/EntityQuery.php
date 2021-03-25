@@ -15,6 +15,9 @@
 		private $field;
 
 
+		/**
+		 * @param string $field
+		 */
 		public function __construct(Entity $entity, $field)
 		{
 			$this->entity = $entity;
@@ -22,18 +25,27 @@
 		}
 
 
+		/**
+		 * @return Entity[]
+		 */
 		public function find()
 		{
 			return $this->entity->find($this->field, $this);
 		}
 
 
+		/**
+		 * @return Entity|NULL
+		 */
 		public function findOne()
 		{
 			return $this->entity->findOne($this->field, $this);
 		}
 
 
+		/**
+		 * @return int
+		 */
 		public function count()
 		{
 			return $this->entity->findCount($this->field, $this);

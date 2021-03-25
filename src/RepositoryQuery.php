@@ -3,6 +3,7 @@
 	namespace Inlm\Model;
 
 	use LeanMapperQuery\Query;
+	use LeanMapper\Entity;
 	use LeanMapper\Repository;
 
 
@@ -18,18 +19,27 @@
 		}
 
 
+		/**
+		 * @return Entity[]
+		 */
 		public function find()
 		{
 			return $this->repository->find($this);
 		}
 
 
+		/**
+		 * @return Entity|NULL
+		 */
 		public function findOne()
 		{
 			return $this->repository->findOne($this);
 		}
 
 
+		/**
+		 * @return int
+		 */
 		public function count()
 		{
 			return $this->repository->findCount($this);
