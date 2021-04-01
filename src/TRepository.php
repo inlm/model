@@ -5,11 +5,15 @@
 	use LeanMapper\Entity;
 
 
+	/**
+	 * @phpstan-template T of \LeanMapper\Entity
+	 */
 	trait TRepository
 	{
 		/**
 		 * Creates new empty (detached) entity
 		 * @return Entity
+		 * @phpstan-return T
 		 */
 		public function createNewEntity()
 		{
@@ -21,6 +25,7 @@
 		/**
 		 * Fetchs entity by primary key
 		 * @return Entity|NULL
+		 * @phpstan-return T|NULL
 		 */
 		public function get($id)
 		{
@@ -31,6 +36,7 @@
 		/**
 		 * Fetchs entity by column value
 		 * @return Entity|NULL
+		 * @phpstan-return T|NULL
 		 */
 		protected function getByColumn($column, $value)
 		{

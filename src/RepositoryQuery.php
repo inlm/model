@@ -7,6 +7,9 @@
 	use LeanMapper\Repository;
 
 
+	/**
+	 * @phpstan-template T of \LeanMapper\Entity
+	 */
 	class RepositoryQuery extends Query implements \Countable
 	{
 		/** @var Repository */
@@ -21,6 +24,7 @@
 
 		/**
 		 * @return Entity[]
+		 * @phpstan-return T[]
 		 */
 		public function find()
 		{
@@ -30,6 +34,7 @@
 
 		/**
 		 * @return Entity|NULL
+		 * @phpstan-return T|NULL
 		 */
 		public function findOne()
 		{

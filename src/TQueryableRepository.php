@@ -7,11 +7,15 @@
 	use LeanMapperQuery\Query;
 
 
+	/**
+	 * @phpstan-template T of \LeanMapper\Entity
+	 */
 	trait TQueryableRepository
 	{
 		/**
 		 * Creates base query object
 		 * @return RepositoryQuery
+		 * @phpstan-return RepositoryQuery<T>
 		 */
 		public function query()
 		{
@@ -22,6 +26,7 @@
 		/**
 		 * Fetchs entities by Query object
 		 * @return Entity[]
+		 * @phpstan-return T[]
 		 */
 		public function find(Query $query)
 		{
@@ -32,6 +37,7 @@
 		/**
 		 * Fetchs one entity by Query object
 		 * @return Entity|NULL
+		 * @phpstan-return T|NULL
 		 */
 		public function findOne(Query $query)
 		{

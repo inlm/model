@@ -27,6 +27,7 @@
 
 		/**
 		 * @return Entity[]
+		 * @phpstan-return array
 		 */
 		public function find()
 		{
@@ -36,6 +37,7 @@
 
 		/**
 		 * @return Entity|NULL
+		 * @phpstan-return mixed|NULL
 		 */
 		public function findOne()
 		{
