@@ -5,7 +5,7 @@ require __DIR__ . '/../vendor/autoload.php';
 Tester\Environment::setup();
 
 
-function createConnection()
+function createConnection(): LeanMapper\Connection
 {
 	return new LeanMapper\Connection([
 		'driver' => 'sqlite3',
@@ -14,23 +14,31 @@ function createConnection()
 }
 
 
-function createMapper()
+function createMapper(): LeanMapper\DefaultMapper
 {
 	return new LeanMapper\DefaultMapper(NULL);
 }
 
 
-function createEntityFactory()
+function createEntityFactory(): LeanMapper\DefaultEntityFactory
 {
 	return new LeanMapper\DefaultEntityFactory;
 }
 
 
+/**
+ * @param  LeanMapper\Entity[] $entities
+ * @return int[]
+ */
 function extractIds(array $entities)
 {
 	$ids = [];
 
 	foreach ($entities as $entity) {
+		if (!isset($entity->id)) {
+			throw new \RuntimeException("Missing column 'id'.");
+		}
+
 		$ids[] = $entity->id;
 	}
 
@@ -38,7 +46,7 @@ function extractIds(array $entities)
 }
 
 
-function test($cb)
+function test(callable $cb): void
 {
 	$cb();
 }
@@ -46,6 +54,7 @@ function test($cb)
 
 class SqlLogger
 {
+	/** @var string[] */
 	private $sqls = [];
 
 
@@ -57,19 +66,22 @@ class SqlLogger
 	}
 
 
-	public function reset()
+	public function reset(): void
 	{
 		$this->sqls = [];
 	}
 
 
-	public function add($sql)
+	public function add(string $sql): void
 	{
 		$this->sqls[] = $sql;
 	}
 
 
-	public function getAll()
+	/**
+	 * @return string[]
+	 */
+	public function getAll(): array
 	{
 		return $this->sqls;
 	}

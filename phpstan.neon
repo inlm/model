@@ -1,5 +1,42 @@
 parameters:
-	level: 1
+	level: max
 
 	paths:
 		- src
+		- tests
+
+	ignoreErrors:
+		-
+			message: "#^Call to an undefined method LeanMapper\\\\Entity\\:\\:find\\(\\)\\.$#"
+			count: 1
+			path: src/EntityQuery.php
+
+		-
+			message: "#^Call to an undefined method LeanMapper\\\\Entity\\:\\:findCount\\(\\)\\.$#"
+			count: 1
+			path: src/EntityQuery.php
+
+		-
+			message: "#^Call to an undefined method LeanMapper\\\\Entity\\:\\:findOne\\(\\)\\.$#"
+			count: 1
+			path: src/EntityQuery.php
+
+		-
+			message: "#^Method Inlm\\\\Model\\\\EntityQuery\\:\\:find\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/EntityQuery.php
+
+		-
+			message: "#^Call to an undefined method LeanMapper\\\\Repository\\:\\:find\\(\\)\\.$#"
+			count: 1
+			path: src/RepositoryQuery.php
+
+		-
+			message: "#^Call to an undefined method LeanMapper\\\\Repository\\:\\:findCount\\(\\)\\.$#"
+			count: 1
+			path: src/RepositoryQuery.php
+
+		-
+			message: "#^Call to an undefined method LeanMapper\\\\Repository\\:\\:findOne\\(\\)\\.$#"
+			count: 1
+			path: src/RepositoryQuery.php

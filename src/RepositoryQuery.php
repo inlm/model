@@ -42,11 +42,8 @@
 		}
 
 
-		/**
-		 * @return int
-		 */
-		public function count()
+		public function count(): int
 		{
-			return $this->repository->findCount($this);
+			return (int) $this->repository->findCount($this);
 		}
 	}
