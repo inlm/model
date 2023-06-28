@@ -1,7 +1,9 @@
-
 # Inlm Model
 
-[![Tests Status](https://github.com/inlm/model/workflows/Tests/badge.svg)](https://github.com/inlm/model/actions)
+[![Build Status](https://github.com/inlm/model/workflows/Build/badge.svg)](https://github.com/inlm/model/actions)
+[![Downloads this Month](https://img.shields.io/packagist/dm/inlm/model.svg)](https://packagist.org/packages/inlm/model)
+[![Latest Stable Version](https://poser.pugx.org/inlm/model/v/stable)](https://github.com/inlm/model/releases)
+[![License](https://img.shields.io/badge/license-New%20BSD-blue.svg)](https://github.com/inlm/model/blob/master/license.md)
 
 Base model for [Lean Mapper](http://www.leanmapper.com/).
 
