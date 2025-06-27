@@ -27,8 +27,9 @@
 
 		/**
 		 * Fetchs entities by Query object
-		 * @return Entity[]
-		 * @phpstan-return T[]
+		 * @param  Query<T> $query
+		 * @return iterable<Entity>
+		 * @phpstan-return iterable<T>
 		 */
 		public function find(Query $query)
 		{
@@ -38,6 +39,7 @@
 
 		/**
 		 * Fetchs one entity by Query object
+		 * @param  Query<T> $query
 		 * @return Entity|NULL
 		 * @phpstan-return T|NULL
 		 */
@@ -53,6 +55,7 @@
 
 		/**
 		 * Fetchs count by Query object
+		 * @param  Query<T> $query
 		 * @return int
 		 */
 		public function findCount(Query $query)
@@ -62,6 +65,7 @@
 
 
 		/**
+		 * @param  Query<T> $query
 		 * @return Fluent
 		 */
 		protected function applyQuery(Query $query)

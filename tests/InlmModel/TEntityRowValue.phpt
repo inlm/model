@@ -64,6 +64,6 @@ test(function () {
 	}, LeanMapper\Exception\InvalidArgumentException::class, "Property 'id' has not HasOne relationship.");
 
 	Assert::exception(function () use ($book) {
-		$book->getRowValue('id', 100);
+		$book->getRowValue('id');
 	}, LeanMapper\Exception\InvalidArgumentException::class, "Property 'id' has not HasOne relationship.");
 });

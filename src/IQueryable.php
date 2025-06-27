@@ -8,21 +8,27 @@
 	use LeanMapperQuery\Query;
 
 
+	/**
+	 * @template T of \LeanMapper\Entity
+	 */
 	interface IQueryable
 	{
 		/**
-		 * @return Entity[]
+		 * @param Query<T> $query
+		 * @return T[]
 		 */
 		public function find(Query $query);
 
 
 		/**
-		 * @return Entity
+		 * @param Query<T> $query
+		 * @return T|NULL
 		 */
 		public function findOne(Query $query);
 
 
 		/**
+		 * @param Query<T> $query
 		 * @return int
 		 */
 		public function findCount(Query $query);

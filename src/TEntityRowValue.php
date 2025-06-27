@@ -12,8 +12,9 @@
 	trait TEntityRowValue
 	{
 		/**
-		 * @param  string
-		 * @param  scalar
+		 * @param  string $field
+		 * @param  mixed $value
+		 * @return void
 		 * @see http://forum.dibiphp.com/cs/14592-lean-mapper-tenke-orm-nad-dibi?p=3#p105515
 		 */
 		public function setRowValue($field, $value)
@@ -42,8 +43,8 @@
 
 
 		/**
-		 * @param  string
-		 * @return scalar
+		 * @param  string $field
+		 * @return mixed
 		 */
 		public function getRowValue($field)
 		{

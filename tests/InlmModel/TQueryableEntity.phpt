@@ -31,6 +31,7 @@ class Book extends \LeanMapper\Entity
 
 class AuthorRepository extends \LeanMapper\Repository
 {
+	/** @use Inlm\Model\TRepository<Author> */
 	use Inlm\Model\TRepository;
 }
 
@@ -45,6 +46,7 @@ $authorRepository = new AuthorRepository(
 
 test(function () use ($authorRepository, $sql) {
 	$author = $authorRepository->get(1);
+	assert($author !== NULL);
 	$sql->reset();
 	$books = $author->query('books')
 		->orderBy('@id DESC')
@@ -62,11 +64,13 @@ test(function () use ($authorRepository, $sql) {
 
 test(function () use ($authorRepository, $sql) {
 	$author = $authorRepository->get(1);
+	assert($author !== NULL);
 	$sql->reset();
 	$book = $author->query('books')
 		->orderBy('@id DESC')
 		->findOne();
 
+	assert($book !== NULL);
 	Assert::same(1, $book->id);
 
 	Assert::same([
@@ -77,6 +81,7 @@ test(function () use ($authorRepository, $sql) {
 
 test(function () use ($authorRepository, $sql) {
 	$author = $authorRepository->get(1);
+	assert($author !== NULL);
 	$sql->reset();
 	$book = $author->query('books')
 		->where('@id > 9999')
@@ -88,6 +93,7 @@ test(function () use ($authorRepository, $sql) {
 
 test(function () use ($authorRepository, $sql) {
 	$author = $authorRepository->get(1);
+	assert($author !== NULL);
 	$sql->reset();
 	$count = $author->query('books')
 		->orderBy('@id DESC')

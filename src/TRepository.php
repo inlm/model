@@ -26,6 +26,7 @@
 
 		/**
 		 * Fetchs entity by primary key
+		 * @param  mixed $id
 		 * @return Entity|NULL
 		 * @phpstan-return T|NULL
 		 */
@@ -37,6 +38,8 @@
 
 		/**
 		 * Fetchs entity by column value
+		 * @param  string $column
+		 * @param  mixed $value
 		 * @return Entity|NULL
 		 * @phpstan-return T|NULL
 		 */

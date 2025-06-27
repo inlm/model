@@ -14,6 +14,7 @@
 	{
 		/**
 		 * Creates base query object
+		 * @param  string $field
 		 * @return EntityQuery
 		 */
 		public function query($field)
@@ -24,6 +25,7 @@
 
 		/**
 		 * Fetchs entities by Query object
+		 * @param  string $field
 		 * @return Entity[]
 		 */
 		public function find($field, Query $query)
@@ -35,6 +37,7 @@
 
 		/**
 		 * Fetchs one entity by Query object
+		 * @param  string $field
 		 * @return Entity|NULL
 		 */
 		public function findOne($field, Query $query)
@@ -50,6 +53,7 @@
 
 		/**
 		 * Fetchs count by Query object
+		 * @param  string $field
 		 * @return int
 		 */
 		public function findCount($field, Query $query)

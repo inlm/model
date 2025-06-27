@@ -13,6 +13,7 @@ require __DIR__ . '/../bootstrap.php';
 /**
  * @property int $id
  * @property Author $author m:hasOne
+ * @property int $authorId
  * @property int $Id
  * @property int $reviewerId
  */

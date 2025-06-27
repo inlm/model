@@ -21,6 +21,7 @@ class Book extends \LeanMapper\Entity
 
 class BookRepository extends \LeanMapper\Repository
 {
+	/** @use Inlm\Model\TQueryableRepository<Book> */
 	use Inlm\Model\TQueryableRepository;
 }
 
@@ -58,6 +59,8 @@ test(function () use ($bookRepository, $sql) {
 	$book = $bookRepository->query()
 		->orderBy('@id DESC')
 		->findOne();
+
+	assert($book !== NULL);
 
 	Assert::same(5, $book->id);
 

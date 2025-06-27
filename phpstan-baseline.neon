@@ -1,0 +1,151 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Class Inlm\\Model\\EntityQuery extends generic class LeanMapperQuery\\Query but does not specify its types\: T$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/EntityQuery.php
+
+		-
+			message: '#^Method Inlm\\Model\\EntityQuery\:\:count\(\) should return int\<0, max\> but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: src/EntityQuery.php
+
+		-
+			message: '#^Method Inlm\\Model\\EntityQuery\:\:find\(\) should return array but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: src/EntityQuery.php
+
+		-
+			message: '#^Cannot cast mixed to int\.$#'
+			identifier: cast.int
+			count: 1
+			path: src/RepositoryQuery.php
+
+		-
+			message: '#^Method Inlm\\Model\\RepositoryQuery\:\:count\(\) should return int\<0, max\> but returns int\.$#'
+			identifier: return.type
+			count: 1
+			path: src/RepositoryQuery.php
+
+		-
+			message: '#^Method Inlm\\Model\\RepositoryQuery\:\:find\(\) should return array\<T of LeanMapper\\Entity\> but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: src/RepositoryQuery.php
+
+		-
+			message: '#^Method Inlm\\Model\\RepositoryQuery\:\:findOne\(\) should return \(T of LeanMapper\\Entity\)\|null but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: src/RepositoryQuery.php
+
+		-
+			message: '#^Cannot access property \$id on mixed\.$#'
+			identifier: property.nonObject
+			count: 1
+			path: tests/InlmModel/TQueryableEntity.phpt
+
+		-
+			message: '#^Cannot call method createCollection\(\) on LeanMapper\\IEntityFactory\|null\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: tests/InlmModel/TQueryableEntity.phpt
+
+		-
+			message: '#^Method Inlm\\Model\\Tests\\TQueryableEntity\\Author\:\:find\(\) has parameter \$query with generic class LeanMapperQuery\\Query but does not specify its types\: T$#'
+			identifier: missingType.generics
+			count: 1
+			path: tests/InlmModel/TQueryableEntity.phpt
+
+		-
+			message: '#^Method Inlm\\Model\\Tests\\TQueryableEntity\\Author\:\:find\(\) should return array\<LeanMapper\\Entity\> but returns iterable\<LeanMapper\\Entity\>\.$#'
+			identifier: return.type
+			count: 1
+			path: tests/InlmModel/TQueryableEntity.phpt
+
+		-
+			message: '#^Method Inlm\\Model\\Tests\\TQueryableEntity\\Author\:\:findCount\(\) has parameter \$query with generic class LeanMapperQuery\\Query but does not specify its types\: T$#'
+			identifier: missingType.generics
+			count: 1
+			path: tests/InlmModel/TQueryableEntity.phpt
+
+		-
+			message: '#^Method Inlm\\Model\\Tests\\TQueryableEntity\\Author\:\:findOne\(\) has parameter \$query with generic class LeanMapperQuery\\Query but does not specify its types\: T$#'
+			identifier: missingType.generics
+			count: 1
+			path: tests/InlmModel/TQueryableEntity.phpt
+
+		-
+			message: '#^Method Inlm\\Model\\Tests\\TQueryableEntity\\AuthorRepository\:\:createNewEntity\(\) should return Inlm\\Model\\Tests\\TQueryableEntity\\Author but returns LeanMapper\\Entity\.$#'
+			identifier: return.type
+			count: 1
+			path: tests/InlmModel/TQueryableEntity.phpt
+
+		-
+			message: '#^Method Inlm\\Model\\Tests\\TQueryableEntity\\AuthorRepository\:\:getByColumn\(\) should return Inlm\\Model\\Tests\\TQueryableEntity\\Author\|null but returns LeanMapper\\Entity\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: tests/InlmModel/TQueryableEntity.phpt
+
+		-
+			message: '#^Parameter \#1 \$dibiRow of method LeanMapper\\Repository\:\:createEntity\(\) expects Dibi\\Row&iterable\<string, mixed\>, array\|Dibi\\Row given\.$#'
+			identifier: argument.type
+			count: 1
+			path: tests/InlmModel/TQueryableEntity.phpt
+
+		-
+			message: '#^Parameter \#1 \$entities of function extractIds expects array\<LeanMapper\\Entity\>, array given\.$#'
+			identifier: argument.type
+			count: 1
+			path: tests/InlmModel/TQueryableEntity.phpt
+
+		-
+			message: '#^Method Inlm\\Model\\Tests\\TQueryableRepository\\BookRepository\:\:find\(\) should return iterable\<Inlm\\Model\\Tests\\TQueryableRepository\\Book\> but returns iterable\<LeanMapper\\Entity\>\.$#'
+			identifier: return.type
+			count: 1
+			path: tests/InlmModel/TQueryableRepository.phpt
+
+		-
+			message: '#^Method Inlm\\Model\\Tests\\TQueryableRepository\\BookRepository\:\:findOne\(\) should return Inlm\\Model\\Tests\\TQueryableRepository\\Book\|null but returns LeanMapper\\Entity\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: tests/InlmModel/TQueryableRepository.phpt
+
+		-
+			message: '#^Method Inlm\\Model\\Tests\\TQueryableRepository\\BookRepository\:\:query\(\) should return Inlm\\Model\\RepositoryQuery\<Inlm\\Model\\Tests\\TQueryableRepository\\Book\> but returns Inlm\\Model\\RepositoryQuery\<LeanMapper\\Entity\>\.$#'
+			identifier: return.type
+			count: 1
+			path: tests/InlmModel/TQueryableRepository.phpt
+
+		-
+			message: '#^Parameter \#1 \$dibiRow of method LeanMapper\\Repository\:\:createEntity\(\) expects Dibi\\Row&iterable\<string, mixed\>, array\|Dibi\\Row given\.$#'
+			identifier: argument.type
+			count: 1
+			path: tests/InlmModel/TQueryableRepository.phpt
+
+		-
+			message: '#^Parameter \#1 \$rows of method LeanMapper\\Repository\:\:createEntities\(\) expects array\<Dibi\\Row\>, array given\.$#'
+			identifier: argument.type
+			count: 1
+			path: tests/InlmModel/TQueryableRepository.phpt
+
+		-
+			message: '#^Method Inlm\\Model\\Tests\\TRepository\\BookRepository\:\:createNewEntity\(\) should return Inlm\\Model\\Tests\\TRepository\\Book but returns LeanMapper\\Entity\.$#'
+			identifier: return.type
+			count: 1
+			path: tests/InlmModel/TRepository.phpt
+
+		-
+			message: '#^Method Inlm\\Model\\Tests\\TRepository\\BookRepository\:\:getByColumn\(\) should return Inlm\\Model\\Tests\\TRepository\\Book\|null but returns LeanMapper\\Entity\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: tests/InlmModel/TRepository.phpt
+
+		-
+			message: '#^Parameter \#1 \$dibiRow of method LeanMapper\\Repository\:\:createEntity\(\) expects Dibi\\Row&iterable\<string, mixed\>, array\|Dibi\\Row given\.$#'
+			identifier: argument.type
+			count: 1
+			path: tests/InlmModel/TRepository.phpt

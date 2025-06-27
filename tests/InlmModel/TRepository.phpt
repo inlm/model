@@ -20,6 +20,7 @@ class Book extends \LeanMapper\Entity
 
 class BookRepository extends \LeanMapper\Repository
 {
+	/** @use Inlm\Model\TRepository<Book> */
 	use Inlm\Model\TRepository;
 }
 
@@ -45,6 +46,7 @@ test(function () use ($bookRepository) {
 
 test(function () use ($bookRepository) {
 	$book = $bookRepository->get(1);
+	assert($book !== NULL);
 	Assert::false($book->isDetached());
 	Assert::same([
 		'id' => 1,

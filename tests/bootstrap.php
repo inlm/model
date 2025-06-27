@@ -42,6 +42,10 @@ function extractIds(array $entities)
 			throw new \RuntimeException("Missing column 'id'.");
 		}
 
+		if (!is_int($entity->id)) {
+			throw new \RuntimeException("Value of column 'id' must be int.");
+		}
+
 		$ids[] = $entity->id;
 	}
 
@@ -64,7 +68,9 @@ class SqlLogger
 	public function __construct(LeanMapper\Connection $connection)
 	{
 		$connection->onEvent[] = function ($event) {
-			$this->add($event->sql);
+			if (is_object($event) && isset($event->sql) && is_string($event->sql)) {
+				$this->add($event->sql);
+			}
 		};
 	}
 

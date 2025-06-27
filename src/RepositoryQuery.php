@@ -11,6 +11,7 @@
 
 	/**
 	 * @phpstan-template T of \LeanMapper\Entity
+	 * @extends Query<T>
 	 */
 	class RepositoryQuery extends Query implements \Countable
 	{
