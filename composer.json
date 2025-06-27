@@ -22,5 +22,8 @@
 	},
 	"require-dev": {
 		"nette/tester": "^2.5"
+	},
+	"conflict": {
+		"dibi/dibi": "<= 4.3.0"
 	}
 }
