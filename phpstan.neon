@@ -5,6 +5,10 @@ parameters:
 		- src
 		- tests
 
+	fileExtensions:
+		- php
+		- phpt
+
 	ignoreErrors:
 		-
 			message: "#^Call to an undefined method LeanMapper\\\\Entity\\:\\:find\\(\\)\\.$#"
