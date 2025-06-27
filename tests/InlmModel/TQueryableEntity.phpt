@@ -70,7 +70,7 @@ test(function () use ($authorRepository, $sql) {
 		->orderBy('@id DESC')
 		->findOne();
 
-	assert($book !== NULL);
+	assert($book !== NULL && isset($book->id));
 	Assert::same(1, $book->id);
 
 	Assert::same([

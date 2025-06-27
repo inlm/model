@@ -26,7 +26,7 @@
 		/**
 		 * Fetchs entities by Query object
 		 * @param  string $field
-		 * @return Entity[]
+		 * @return iterable<Entity>
 		 */
 		public function find($field, Query $query)
 		{

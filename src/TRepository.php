@@ -8,14 +8,13 @@
 
 
 	/**
-	 * @phpstan-template T of \LeanMapper\Entity
+	 * @template T of \LeanMapper\Entity
 	 */
 	trait TRepository
 	{
 		/**
 		 * Creates new empty (detached) entity
-		 * @return Entity
-		 * @phpstan-return T
+		 * @return T
 		 */
 		public function createNewEntity()
 		{
@@ -27,8 +26,7 @@
 		/**
 		 * Fetchs entity by primary key
 		 * @param  mixed $id
-		 * @return Entity|NULL
-		 * @phpstan-return T|NULL
+		 * @return T|NULL
 		 */
 		public function get($id)
 		{
@@ -40,8 +38,7 @@
 		 * Fetchs entity by column value
 		 * @param  string $column
 		 * @param  mixed $value
-		 * @return Entity|NULL
-		 * @phpstan-return T|NULL
+		 * @return T|NULL
 		 */
 		protected function getByColumn($column, $value)
 		{

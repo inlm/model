@@ -10,14 +10,13 @@
 
 
 	/**
-	 * @phpstan-template T of \LeanMapper\Entity
+	 * @template T of \LeanMapper\Entity
 	 */
 	trait TQueryableRepository
 	{
 		/**
 		 * Creates base query object
-		 * @return RepositoryQuery
-		 * @phpstan-return RepositoryQuery<T>
+		 * @return RepositoryQuery<T>
 		 */
 		public function query()
 		{
@@ -28,8 +27,7 @@
 		/**
 		 * Fetchs entities by Query object
 		 * @param  Query<T> $query
-		 * @return iterable<Entity>
-		 * @phpstan-return iterable<T>
+		 * @return iterable<T>
 		 */
 		public function find(Query $query)
 		{
@@ -40,8 +38,7 @@
 		/**
 		 * Fetchs one entity by Query object
 		 * @param  Query<T> $query
-		 * @return Entity|NULL
-		 * @phpstan-return T|NULL
+		 * @return T|NULL
 		 */
 		public function findOne(Query $query)
 		{

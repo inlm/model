@@ -30,10 +30,11 @@ function createEntityFactory(): LeanMapper\DefaultEntityFactory
 
 
 /**
- * @param  LeanMapper\Entity[] $entities
+ * @template T of LeanMapper\Entity
+ * @param  iterable<T> $entities
  * @return int[]
  */
-function extractIds(array $entities)
+function extractIds(iterable $entities)
 {
 	$ids = [];
 

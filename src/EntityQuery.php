@@ -28,8 +28,7 @@
 
 
 		/**
-		 * @return Entity[]
-		 * @phpstan-return array
+		 * @return iterable<Entity>
 		 */
 		public function find()
 		{
@@ -39,7 +38,6 @@
 
 		/**
 		 * @return Entity|NULL
-		 * @phpstan-return mixed|NULL
 		 */
 		public function findOne()
 		{

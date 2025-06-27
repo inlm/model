@@ -10,7 +10,7 @@
 
 
 	/**
-	 * @phpstan-template T of \LeanMapper\Entity
+	 * @template T of \LeanMapper\Entity
 	 * @extends Query<T>
 	 */
 	class RepositoryQuery extends Query implements \Countable
@@ -26,8 +26,7 @@
 
 
 		/**
-		 * @return Entity[]
-		 * @phpstan-return T[]
+		 * @return iterable<T>
 		 */
 		public function find()
 		{
@@ -36,8 +35,7 @@
 
 
 		/**
-		 * @return Entity|NULL
-		 * @phpstan-return T|NULL
+		 * @return T|NULL
 		 */
 		public function findOne()
 		{

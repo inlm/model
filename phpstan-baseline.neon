@@ -13,7 +13,13 @@ parameters:
 			path: src/EntityQuery.php
 
 		-
-			message: '#^Method Inlm\\Model\\EntityQuery\:\:find\(\) should return array but returns mixed\.$#'
+			message: '#^Method Inlm\\Model\\EntityQuery\:\:find\(\) should return iterable\<LeanMapper\\Entity\> but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: src/EntityQuery.php
+
+		-
+			message: '#^Method Inlm\\Model\\EntityQuery\:\:findOne\(\) should return LeanMapper\\Entity\|null but returns mixed\.$#'
 			identifier: return.type
 			count: 1
 			path: src/EntityQuery.php
@@ -31,7 +37,7 @@ parameters:
 			path: src/RepositoryQuery.php
 
 		-
-			message: '#^Method Inlm\\Model\\RepositoryQuery\:\:find\(\) should return array\<T of LeanMapper\\Entity\> but returns mixed\.$#'
+			message: '#^Method Inlm\\Model\\RepositoryQuery\:\:find\(\) should return iterable\<T of LeanMapper\\Entity\> but returns mixed\.$#'
 			identifier: return.type
 			count: 1
 			path: src/RepositoryQuery.php
@@ -43,12 +49,6 @@ parameters:
 			path: src/RepositoryQuery.php
 
 		-
-			message: '#^Cannot access property \$id on mixed\.$#'
-			identifier: property.nonObject
-			count: 1
-			path: tests/InlmModel/TQueryableEntity.phpt
-
-		-
 			message: '#^Cannot call method createCollection\(\) on LeanMapper\\IEntityFactory\|null\.$#'
 			identifier: method.nonObject
 			count: 1
@@ -57,12 +57,6 @@ parameters:
 		-
 			message: '#^Method Inlm\\Model\\Tests\\TQueryableEntity\\Author\:\:find\(\) has parameter \$query with generic class LeanMapperQuery\\Query but does not specify its types\: T$#'
 			identifier: missingType.generics
-			count: 1
-			path: tests/InlmModel/TQueryableEntity.phpt
-
-		-
-			message: '#^Method Inlm\\Model\\Tests\\TQueryableEntity\\Author\:\:find\(\) should return array\<LeanMapper\\Entity\> but returns iterable\<LeanMapper\\Entity\>\.$#'
-			identifier: return.type
 			count: 1
 			path: tests/InlmModel/TQueryableEntity.phpt
 
@@ -92,12 +86,6 @@ parameters:
 
 		-
 			message: '#^Parameter \#1 \$dibiRow of method LeanMapper\\Repository\:\:createEntity\(\) expects Dibi\\Row&iterable\<string, mixed\>, array\|Dibi\\Row given\.$#'
-			identifier: argument.type
-			count: 1
-			path: tests/InlmModel/TQueryableEntity.phpt
-
-		-
-			message: '#^Parameter \#1 \$entities of function extractIds expects array\<LeanMapper\\Entity\>, array given\.$#'
 			identifier: argument.type
 			count: 1
 			path: tests/InlmModel/TQueryableEntity.phpt
