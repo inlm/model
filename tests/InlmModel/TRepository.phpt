@@ -2,6 +2,9 @@
 
 declare(strict_types=1);
 
+namespace Inlm\Model\Tests\TRepository;
+
+use Inlm;
 use Tester\Assert;
 
 require __DIR__ . '/../bootstrap.php';
@@ -23,7 +26,7 @@ class BookRepository extends \LeanMapper\Repository
 
 $bookRepository = new BookRepository(
 	createConnection(),
-	createMapper(),
+	createMapper(__NAMESPACE__),
 	createEntityFactory()
 );
 

@@ -2,6 +2,10 @@
 
 declare(strict_types=1);
 
+namespace Inlm\Model\Tests\TQueryableRepository;
+
+use Inlm;
+use SqlLogger;
 use Tester\Assert;
 
 require __DIR__ . '/../bootstrap.php';
@@ -24,7 +28,7 @@ $connection = createConnection();
 $sql = new SqlLogger($connection);
 $bookRepository = new BookRepository(
 	$connection,
-	createMapper(),
+	createMapper(__NAMESPACE__),
 	createEntityFactory()
 );
 

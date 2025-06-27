@@ -17,9 +17,9 @@ function createConnection(): LeanMapper\Connection
 }
 
 
-function createMapper(): LeanMapper\DefaultMapper
+function createMapper(string $namespace): LeanMapper\DefaultMapper
 {
-	return new LeanMapper\DefaultMapper(NULL);
+	return new LeanMapper\DefaultMapper($namespace);
 }
 
 

@@ -2,6 +2,10 @@
 
 declare(strict_types=1);
 
+namespace Inlm\Model\Tests\TEntityRowValue;
+
+use Inlm;
+use LeanMapper;
 use Tester\Assert;
 
 require __DIR__ . '/../bootstrap.php';
